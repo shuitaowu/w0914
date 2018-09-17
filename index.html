@@ -8,13 +8,19 @@
 
 </head>
 <body>
-   <p id="BMI">bmi</p>
+    身高(cm) : <input type="text" id = "height"><br>
+    體重(kg) : <input type="text" id = "weight"><br>
+    <input type="button" value="計算" onclick = "calcBmi()"><hr>
+   <p id="bmitext"></p> <br>
 <script>
- var w =85; 
- var h =1.8; 
- var bmi = w/(h*h);
- document.write("當體重"+w+"公斤,身高"+h*100+"公分 <br>");
- document.write("BMI是"+Math.round(bmi*100)/100+"<br>");
+    function calcBmi(){
+ var h =document.getElementById("height").value; 
+ h = parseFloat (h) /100;
+ var w =document.getElementById("weight").value; 
+ w = parseFloat (w); 
+
+ bmi = w / (h*h)
+ var ans="";
  
  if (bmi<25){
      ans="體重過輕"
@@ -23,7 +29,8 @@
  } else if(bmi>=25&&bmi){
      ans="體重正常"; 
  }
- document.write(ans);
+ document.getElementById("bmitext").innerHTML = bmi+"</br>"+ans;
+}
     </script>
 </body>
 
