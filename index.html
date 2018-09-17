@@ -8,11 +8,22 @@
 
 </head>
 <body>
-    <p id="demo">...</p>
-    <script>
-        //alert("holl,javascript");
-        document.write("<h1>This is a heading.</h1>");
-        document.getElementById("demo").innerHTML="<h2>abc</h2>"
+   <p id="BMI">bmi</p>
+<script>
+ var w =85; 
+ var h =1.8; 
+ var bmi = w/(h*h);
+ document.write("當體重"+w+"公斤,身高"+h*100+"公分 <br>");
+ document.write("BMI是"+Math.round(bmi*100)/100+"<br>");
+ 
+ if (bmi<25){
+     ans="體重過輕"
+ }else if(bmi>30){
+     ans="體重過重"
+ } else if(bmi>=25&&bmi){
+     ans="體重正常"; 
+ }
+ document.write(ans);
     </script>
 </body>
 
