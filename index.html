@@ -4,35 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>20180917</title>
-
+    <title>Document</title>
 </head>
 <body>
-    身高(cm) : <input type="text" id = "height"><br>
-    體重(kg) : <input type="text" id = "weight"><br>
-    <input type="button" value="計算" onclick = "calcBmi()"><hr>
-   <p id="bmitext"></p> <br>
-<script>
-    function calcBmi(){
- var h =document.getElementById("height").value; 
- h = parseFloat (h) /100;
- var w =document.getElementById("weight").value; 
- w = parseFloat (w); 
-
- bmi = w / (h*h)
- var ans="";
- 
- if (bmi<25){
-     ans="體重過輕"
- }else if(bmi>30){
-     ans="體重過重"
- } else if(bmi>=25&&bmi){
-     ans="體重正常"; 
- }
- document.getElementById("bmitext").innerHTML = bmi+"</br>"+ans;
-}
+    <script>
+        function Person(first,last,age,eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age =age;
+            this.eyeName = eye;
+        }
+        var Person3  = new person ('Bill','Gates',60,'blue');
+        console.log(person3);
+        document.write(person1);
+        document.write(Json.stringify(person1));
     </script>
 </body>
-
-
 </html>
